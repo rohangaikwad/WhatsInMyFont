@@ -1,0 +1,37 @@
+
+:root {
+    --icon-sz: 100px;
+    --font-name: 'calibri';
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.glyph-item {
+    display: flex;
+    flex-direction: column;
+    height: calc(var(--icon-sz) + 20px);
+    width: var(--icon-sz);
+    border: solid 1px #fff;
+    background: #f1f1f1;
+}
+
+.glyph {
+    display: flex;
+    height: var(--icon-sz);
+    width: var(--icon-sz);
+    justify-content: center;
+    align-items: center;
+    font-family: var(--font-name);
+    font-size: calc(var(--icon-sz)/3);
+}
+
+.name {
+    text-align: center;
+    background: #ccc;
+}
+
+input[type="range"] { width: 500px }
