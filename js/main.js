@@ -77,6 +77,7 @@ function renderFont(font) {
 
             let glyph = document.createElement('span');
             glyph.classList.add('glyph');
+            glyph.setAttribute('data-glyph-unicode', font.glyphs.glyphs[i].unicode);
             glyph.innerHTML = `&#${font.glyphs.glyphs[i].unicode};`
             div.appendChild(glyph);
 
