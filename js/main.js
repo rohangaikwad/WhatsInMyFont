@@ -70,7 +70,7 @@ function renderFont(font) {
 
     root.style.setProperty('--font-name', `"${font.names.fontFamily.en}`);
 
-    for (let i = 0; i < font.glyphNames.names.length; i++) {
+    for (let i = 0; i < Object.keys(font.glyphs.glyphs).length; i++) {
         if (font.glyphs.glyphs[i].unicode != undefined) {
             let div = document.createElement('div');
             div.classList.add('glyph-item');
@@ -84,7 +84,7 @@ function renderFont(font) {
 
             let name = document.createElement('span');
             name.classList.add('name');
-            name.innerHTML = font.glyphNames.names[i];
+            name.innerHTML = font.glyphNames.names[i] || font.glyphs.glyphs[i].unicode.toString(16);
             div.appendChild(name);
 
             container.appendChild(div);
